@@ -9,11 +9,12 @@ namespace DesafioPOO.Models
         private string IMEI;
         private int Memoria;
 
-        public Smartphone(string numero, string modelo, string imei, int memoria)
+        public Smartphone(string numero, string modelo, string imei, int memoria, Registro registro)
         {
             if (ConferePadraoNumero(numero))
             {
                 Numero = numero;
+                registro.AdicionarNumero(numero);
             }
             else
             {
